@@ -13,6 +13,7 @@ struct CountryListView: View {
     
     var body: some View {
         NavigationView {
+            // TODO: Find another way of appending common modifiers
             VStack {
                 if let countries = countries {
                     List{

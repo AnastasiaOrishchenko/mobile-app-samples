@@ -15,6 +15,7 @@ class CountriesRestApi {
             return
         }
         
+        // TODO: Add error handling
         URLSession(configuration: .ephemeral).dataTask(with: url) { data, response, error in
             let countries = try! JSONDecoder().decode([Country].self, from: data!)
             DispatchQueue.main.async {
