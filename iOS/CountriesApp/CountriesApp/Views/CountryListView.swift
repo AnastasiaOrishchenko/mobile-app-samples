@@ -13,8 +13,7 @@ struct CountryListView: View {
     
     var body: some View {
         NavigationView {
-            // TODO: Find another way of appending common modifiers
-            VStack {
+            Group {
                 if let countries = countries {
                     List{
                         ForEach(countries, id: \.code , content: { country in

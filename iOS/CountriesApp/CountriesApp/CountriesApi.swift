@@ -10,7 +10,7 @@ import Foundation
 class CountriesRestApi {
     
     func getAll(completion: @escaping ([Country]) -> ()) {
-        guard let url = URL(string: "https://restcountries.eu/rest/v2/all?fields=name;capital;alpha3Code;region;flag") else {
+        guard let url = URL(string: "https://restcountries.eu/rest/v2/all?fields=name;capital;alpha3Code;region") else {
             print("invalid url")
             return
         }

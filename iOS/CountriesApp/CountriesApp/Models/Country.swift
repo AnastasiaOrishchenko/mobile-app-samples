@@ -11,19 +11,17 @@ struct Country: Decodable {
     let code: String
     let name: String
     let capital: String
-    let region: Region?
-    let flagUrl: String
+    let region: Region
     
     enum CodingKeys: String, CodingKey {
         case code = "alpha3Code"
         case name
         case capital
         case region
-        case flagUrl = "flag"
     }
 }
 
-enum Region: String, Decodable {
+enum Region: String, Decodable, CaseIterable {
     case africa = "Africa"
     case americas = "Americas"
     case asia = "Asia"
