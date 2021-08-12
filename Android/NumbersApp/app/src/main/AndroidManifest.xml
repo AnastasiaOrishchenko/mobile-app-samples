@@ -3,16 +3,17 @@
     package="com.example.numbers">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Numbers">
+        android:theme="@style/Theme.Numbers"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.numbers.fact.SingleFactActivity"
+            android:name="com.example.numbers.ui.fact.SingleFactActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

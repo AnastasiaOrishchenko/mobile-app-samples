@@ -1,39 +1,35 @@
 package com.example.numbers
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import androidx.core.widget.addTextChangedListener
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.numbers.databinding.ActivityMainBinding
-import com.example.numbers.fact.SingleFactActivity
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.chooseRandomButton.setOnClickListener { chooseRandom() }
-        binding.findFactButton.setOnClickListener { navigateToFactScreen() }
-        binding.numberInput.addTextChangedListener {
-            binding.findFactButton.isEnabled = it?.toString()?.isNotBlank() ?: false
-        }
-    }
 
-    private fun chooseRandom() {
-        val randomNumber = Random.nextInt(1000)
-        binding.numberInput.text =
-            Editable.Factory.getInstance().newEditable(randomNumber.toString())
-    }
+        val navView: BottomNavigationView = binding.navView
 
-    private fun navigateToFactScreen() {
-        val context = binding.findFactButton.context
-        val intent = Intent(context, SingleFactActivity::class.java)
-        intent.putExtra("number", Integer.valueOf(binding.numberInput.text.toString()))
-        context.startActivity(intent)
+        val navController = findNavController(R.id.nav_host_fragment_activity_main2)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_search, R.id.navigation_saved
+            )
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 }

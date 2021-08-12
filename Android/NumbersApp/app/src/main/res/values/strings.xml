@@ -4,4 +4,8 @@
     <string name="chooseRandom_str">Choose random number</string>
     <string name="find_fact_str">Find a fact</string>
     <string name="description_str">This is an app to search for interesting facts about numbers</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_search">Search</string>
+    <string name="title_saved">Saved</string>
+    <string name="save_button_str">Save fact</string>
 </resources>
