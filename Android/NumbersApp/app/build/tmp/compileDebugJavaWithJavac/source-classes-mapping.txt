@@ -1,0 +1,6 @@
+com/example/numbers/databinding/ActivityMainBinding.java
+ com.example.numbers.databinding.ActivityMainBinding
+com/example/numbers/databinding/ActivitySingleFactBinding.java
+ com.example.numbers.databinding.ActivitySingleFactBinding
+com/example/numbers/BuildConfig.java
+ com.example.numbers.BuildConfig

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Numbers</string>
+    <string name="helper_text">Type a number</string>
+    <string name="chooseRandom_str">Choose random number</string>
+    <string name="find_fact_str">Find a fact</string>
+    <string name="description_str">This is an app to search for interesting facts about numbers</string>
+</resources>

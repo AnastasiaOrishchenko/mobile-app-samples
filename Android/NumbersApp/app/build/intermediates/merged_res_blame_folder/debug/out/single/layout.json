@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/anastasiaorishchenko/Projects/mobile-app-samples/Android/NumbersApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_single_fact.xml",
+        "source": "/Users/anastasiaorishchenko/Projects/mobile-app-samples/Android/NumbersApp/app/src/main/res/layout/activity_single_fact.xml"
+    },
+    {
+        "merged": "/Users/anastasiaorishchenko/Projects/mobile-app-samples/Android/NumbersApp/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/anastasiaorishchenko/Projects/mobile-app-samples/Android/NumbersApp/app/src/main/res/layout/activity_main.xml"
+    }
+]
