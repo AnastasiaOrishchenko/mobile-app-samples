@@ -1,10 +1,12 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Dimensions, FlatList, Image} from 'react-native';
-import {formatPhotoUri} from '../api/picsum';
+import {Dimensions, FlatList} from 'react-native';
+import PhotoGridItem from './PhotoGridItem';
 
 function PhotoGrid({photos, numColumns, onEndReached}) {
   const {width} = Dimensions.get('window');
   const size = width / numColumns;
+  const navigation = useNavigation();
 
   return (
     <FlatList
@@ -13,12 +15,10 @@ function PhotoGrid({photos, numColumns, onEndReached}) {
       numColumns={numColumns}
       onEndReached={onEndReached}
       renderItem={({item}) => (
-        <Image
-          source={{
-            width: size,
-            height: size,
-            uri: formatPhotoUri(item.id, size, size),
-          }}
+        <PhotoGridItem
+          photo={item}
+          size={size}
+          onClick={() => navigation.push('DetailsScreen', {photo: item})}
         />
       )}
     />
